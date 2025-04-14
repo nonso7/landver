@@ -24,24 +24,24 @@ const NavBar = () => {
         <motion.div className="flex items-center gap-2" variants={slideIn}>
           <Image src="/images/logo.svg" alt="logo" height={100} width={100} />
           <nav className="md:flex items-center gap-6 hidden">
-            {["Register Land", "Inspect Land", "Buy Land"].map(
-              (item, index) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link
-                    href="https://demo.landver.net/"
-                    className="hover:text-gray-600 transition-colors text-sm"
-                    target="_blank"
-                  >
-                    {item}
-                  </Link>
-                </motion.div>
-              )
-            )}
+        {["Register Land", "Inspect Land", "Buy Land"].map(
+          (item, index) => (
+            <motion.div
+          key={item}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+            >
+          <Link
+            href="https://demo.landver.net/"
+            className="hover:text-gray-600 transition-colors text-sm"
+            target="_blank"
+          >
+            {item}
+          </Link>
+            </motion.div>
+          )
+        )}
           </nav>
         </motion.div>
 
@@ -50,22 +50,22 @@ const NavBar = () => {
           variants={fadeIn}
         >
           <div className="flex items-center gap-4">
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Link
-                href="/signin"
-                className="text-[#6364d5] hover:text-[#4e4fb8] transition-colors text-sm"
-              >
-                Login
-              </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Link
-                className="text-white rounded text-sm py-3 px-6 bg-[#6364d5]"
-                href="/signup"
-              >
-                Sign Up
-              </Link>
-            </motion.div>
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <Link
+            href="/signin"
+            className="text-[#6364d5] hover:text-[#4e4fb8] transition-colors text-sm"
+          >
+            Login
+          </Link>
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <Link
+            className="text-white rounded text-sm py-3 px-6 bg-[#6364d5]"
+            href="/signup"
+          >
+            Sign Up
+          </Link>
+        </motion.div>
           </div>
         </motion.div>
 

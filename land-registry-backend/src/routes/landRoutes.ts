@@ -33,4 +33,4 @@ landRoutes.get(
   [param('address').isString()],
   validate,
   landController.getLandsByOwner
-); 
+);

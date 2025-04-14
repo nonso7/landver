@@ -3,6 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import authRoutes from "./routes/authRoutes";
 import { config } from "./config";
+import { landRoutes } from "./routes/landRoutes";
 // ... other imports ...
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(express.json());
 
 // Use the auth routes
 app.use("/auth", authRoutes);
+app.use("/lands", landRoutes);
 app.get("/", (req, res) => {
   res.send("Hello World!!!!!! ");
 });
